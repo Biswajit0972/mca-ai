@@ -1,9 +1,10 @@
 import React from 'react'
-
-const Home = () => {
+import isDbConnect from './_lib/database/db.connection';
+const Home = async () => {
+  await isDbConnect()
   return (
-    <div>Home</div>
+    <div>{process.env.name || 'ok'}</div>
   )
 }
 
-export default Home
+export default Home;
