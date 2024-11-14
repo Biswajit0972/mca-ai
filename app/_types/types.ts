@@ -39,3 +39,8 @@ export interface Ianswer extends Document {
     questionId: Schema.Types.ObjectId;
     content: JSON;
 }
+
+export interface ILeaderBoard extends Document {
+    topRankers: Array<Schema.Types.ObjectId>;
+    otherUsers: Array<Schema.Types.ObjectId>;
+}
