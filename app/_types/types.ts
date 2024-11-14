@@ -34,3 +34,8 @@ export interface Iquestion extends Document {
     answerId: Schema.Types.ObjectId;
     topic: Array<string>;
 }
+
+export interface Ianswer extends Document {
+    questionId: Schema.Types.ObjectId;
+    content: JSON;
+}
