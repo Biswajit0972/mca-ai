@@ -6,4 +6,5 @@ export const signUpSchema = z.object({
     email: z.string().email({message: "Please add a valid email"}),
     state: z.string(),
     verificationCode: z.number().min(6, {message: "verification code must be length 6"}),
+    
 })
