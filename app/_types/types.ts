@@ -23,3 +23,14 @@ export interface Iprompt extends Document {
     topic: Array<string>;
     response: JSON;
 }
+
+export interface Iquestion extends Document {
+    promptId: Schema.Types.ObjectId;
+    noteId: Schema.Types.ObjectId;
+    generatedBy: string;
+    content: JSON;
+    correctAnswer: number;
+    diffcultyLevel: string;
+    answerId: Schema.Types.ObjectId;
+    topic: Array<string>;
+}
